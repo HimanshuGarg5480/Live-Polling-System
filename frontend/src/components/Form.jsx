@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import io from "socket.io-client";
-
-const socket = io("https://live-polling-server-o5wm.onrender.com");
+import socket from "../socketConnect";
 
 const Form = () => {
   const [question, setQuestion] = useState("");
