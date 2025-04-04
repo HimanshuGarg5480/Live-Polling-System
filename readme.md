@@ -1,3 +1,7 @@
+# the application is live at
+  Frontend: [Link Text](https://intervue-polling-system.netlify.app/)
+  Backend: [Link Text](https://live-polling-system-i0p7.onrender.com)
+
 # 🗳️ Live Polling System
 
 A real-time interactive live polling system designed for classrooms and educational environments. Teachers can create and manage polls, and students can respond in real-time. Includes features like live results, time-limited responses, and real-time communication.
