@@ -1,6 +1,6 @@
 # the application is live at
-  Frontend: [Link Text](https://intervue-polling-system.netlify.app/)
-  Backend: [Link Text](https://live-polling-system-i0p7.onrender.com)
+  Frontend: [https://intervue-polling-system.netlify.app/](https://intervue-polling-system.netlify.app/)
+  Backend: [https://live-polling-system-i0p7.onrender.com](https://live-polling-system-i0p7.onrender.com)
 
 # 🗳️ Live Polling System
 
