@@ -39,10 +39,6 @@ const Teacher = () => {
     };
   }, []);
 
-  const handleKickStudent = (studentName) => {
-    socket.emit("kickStudent", studentName);
-  };
-
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 flex flex-col">
       <nav className="bg-white dark:bg-gray-800 border-b border-gray-300 dark:border-gray-700 px-6 py-4">

@@ -35,7 +35,6 @@ const Home = () => {
 
         <div className="grid md:grid-cols-2 gap-4 mb-8">
           <div
-            // to="/student"
             className={`p-6 bg-[#2A2A2A] rounded-lg border-2 hover:border-[#6B5DD3] ${
               role == roles[0] ? "border-[#6B5DD3]":"border-transparent"
             } transition-colors cursor-pointer`}
@@ -51,7 +50,6 @@ const Home = () => {
           </div>
 
           <div
-            // to="/teacher"
             className={`p-6 bg-[#2A2A2A] rounded-lg border-2 hover:border-[#6B5DD3] ${
               role == roles[1] ? "border-[#6B5DD3]":"border-transparent"
             } transition-colors cursor-pointer`}

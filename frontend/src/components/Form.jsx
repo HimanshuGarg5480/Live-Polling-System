@@ -62,22 +62,6 @@ const Form = () => {
     }));
   };
 
-  const removeOption = (index) => {
-    const newOptions = options.filter((_, i) => i !== index);
-    setOptions(newOptions);
-
-    const newCorrectOptions = {};
-    Object.entries(correctOptions).forEach(([key, value]) => {
-      const keyNum = parseInt(key);
-      if (keyNum < index) {
-        newCorrectOptions[keyNum] = value;
-      } else if (keyNum > index) {
-        newCorrectOptions[keyNum - 1] = value;
-      }
-    });
-    setCorrectOptions(newCorrectOptions);
-  };
-
   return (
     <div className="space-y-6 bg-gray-900 text-white p-2 sm:p-6 rounded-lg">
       <div className="flex items-center gap-2 mb-4">

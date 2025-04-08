@@ -2,6 +2,7 @@ let currQues = null;
 let students = [];
 let correctAnswer = '';
 let pollResults = {};
+let timerRef = null;
 
 export function handleSocketEvents(io) {
   io.on('connection', (socket) => {
@@ -20,6 +21,13 @@ export function handleSocketEvents(io) {
         return acc;
       }, {});
       io.emit('question', questionData);
+      if (timerRef) clearInterval(timerRef);
+      timerRef = setTimeout(() => {
+        if (currQues) {
+          io.emit('correctAnswer', correctAnswer);
+        }
+      }, 60000);
+
     });
 
     socket.on('submitAnswer', (answer) => {
@@ -47,11 +55,5 @@ export function handleSocketEvents(io) {
       students = students.filter(s => s.id !== socket.id);
       io.emit('students', students.map(student => student.name));
     });
-
-    setInterval(() => {
-      if (currQues) {
-        io.emit('correctAnswer', correctAnswer);
-      }
-    }, 60000);
   });
 }

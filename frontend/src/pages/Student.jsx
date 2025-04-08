@@ -61,10 +61,7 @@ const Student = () => {
       setIsKicked(true);
     });
 
-    return () => {
-      socket.off();
-      if (timerRef.current) clearInterval(timerRef.current);
-    };
+    
   }, [answered, selectedOption]);
 
   const handleNameSubmit = (e) => {
@@ -88,6 +85,16 @@ const Student = () => {
       .toString()
       .padStart(2, "0")}`;
   };
+
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+      socket.off("question");
+      socket.off("pollResults");
+      socket.off("correctAnswer");
+      socket.off("kicked");
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#1E1E1E] text-[#EDEDED] flex items-center justify-center p-4">
